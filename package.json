@@ -1,0 +1,27 @@
+{
+  "name": "newswiz",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "migrate": "pnpm --filter @newswiz/db migrate",
+    "seed": "pnpm --filter @newswiz/db seed",
+    "ingest": "pnpm --filter @newswiz/ingest start",
+    "ingest:once": "pnpm --filter @newswiz/ingest once",
+    "verify-sources": "pnpm --filter @newswiz/ingest verify-sources",
+    "dev:web": "pnpm --filter @newswiz/web dev",
+    "build": "pnpm --filter @newswiz/web build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "discover": "pnpm --filter @newswiz/ingest discover"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}

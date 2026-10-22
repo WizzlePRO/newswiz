@@ -1,0 +1,60 @@
+# `make up` (or `docker compose up -d --build`) runs the whole stack.
+# Settings come from .env (copy .env.example); DATABASE_URL is set here for the containers.
+
+x-app: &app
+  build: .
+  image: newswiz:latest
+  restart: unless-stopped
+  env_file:
+    - path: .env
+      required: false
+  environment:
+    DATABASE_URL: postgres://newswiz:newswiz@db:5432/newswiz
+
+services:
+  db:
+    # pgvector is preinstalled for Phase 2 story clustering.
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: newswiz
+      POSTGRES_PASSWORD: newswiz
+      POSTGRES_DB: newswiz
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    # Published on localhost only, so `make dev` can run the app outside Docker.
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U newswiz -d newswiz"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  # Apply migrations and load data/sources.json + data/bias-ratings.json, then exit.
+  migrate:
+    <<: *app
+    restart: "no"
+    command: ["sh", "-c", "pnpm migrate && pnpm seed"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+  ingest:
+    <<: *app
+    command: ["pnpm", "ingest"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  web:
+    <<: *app
+    command: ["pnpm", "--filter", "@newswiz/web", "start"]
+    ports:
+      - "${WEB_PORT:-3000}:3000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+volumes:
+  pgdata:

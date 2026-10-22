@@ -1,0 +1,25 @@
+{
+  "name": "@newswiz/ingest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "once": "tsx src/main.ts --once",
+    "verify-sources": "tsx src/verify-sources.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "discover": "tsx src/discover-cli.ts"
+  },
+  "dependencies": {
+    "@newswiz/db": "workspace:*",
+    "@newswiz/net": "workspace:*",
+    "fast-xml-parser": "^5.11.2",
+    "he": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/he": "^1.2.3"
+  }
+}

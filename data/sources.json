@@ -1,0 +1,1102 @@
+{
+  "$comment": "Source registry seed. Access models were researched on 2026-10-22; see access_notes for weak evidence. Re-run `pnpm verify-sources` to check feeds.",
+  "sources": [
+    {
+      "slug": "ap",
+      "name": "AP News",
+      "homepage": "https://apnews.com",
+      "country": "US",
+      "ownership_type": "wire",
+      "access_model": "free",
+      "access_notes": "No paywall or registration. AP blocks automated feed requests (HTTP 403 for every endpoint tried on 2026-10-22), so there is no feed. AP copy still arrives through outlets that syndicate it, like ABC News.",
+      "access_evidence_url": "https://apps.apple.com/us/app/ap-news/id364677107",
+      "access_verified_on": "2026-10-22",
+      "feeds": []
+    },
+    {
+      "slug": "reuters",
+      "name": "Reuters",
+      "homepage": "https://www.reuters.com",
+      "country": "US",
+      "ownership_type": "wire",
+      "access_model": "metered",
+      "access_notes": "Dynamic, machine-learning meter with no fixed number of free articles (Sept 2026). Reuters' robots.txt only lets named partner crawlers read its news sitemap, so there is no feed.",
+      "access_evidence_url": "https://digiday.com/media/how-reuters-dynamic-paywall-is-boosting-subscriptions-and-ads/",
+      "access_verified_on": "2026-10-22",
+      "feeds": []
+    },
+    {
+      "slug": "npr",
+      "name": "NPR",
+      "homepage": "https://www.npr.org",
+      "country": "US",
+      "ownership_type": "public_media",
+      "access_model": "free",
+      "access_evidence_url": "https://www.npr.org/2026/05/18/nx-s1-5821622/npr-buyouts-layoffs-reorganization",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://www.npr.org/donations/support",
+      "feeds": [
+        {
+          "url": "https://feeds.npr.org/1001/rss.xml",
+          "poll_interval_minutes": 10,
+          "section": "News"
+        },
+        {
+          "url": "https://feeds.npr.org/1014/rss.xml",
+          "poll_interval_minutes": 15,
+          "section": "Politics"
+        }
+      ]
+    },
+    {
+      "slug": "pbs-newshour",
+      "name": "PBS NewsHour",
+      "homepage": "https://www.pbs.org/newshour",
+      "country": "US",
+      "ownership_type": "public_media",
+      "access_model": "free",
+      "access_notes": "No paywall found. Weak evidence: there is no explicit policy statement.",
+      "access_evidence_url": "https://www.pbs.org/newshour/",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://www.pbs.org/newshour/support",
+      "feeds": [
+        {
+          "url": "https://www.pbs.org/newshour/feeds/rss/headlines",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "bbc",
+      "name": "BBC News",
+      "homepage": "https://www.bbc.com/news",
+      "country": "GB",
+      "ownership_type": "public_media",
+      "access_model": "metered",
+      "access_notes": "US readers only: an engagement-based meter with no fixed number of free articles, $8.99/mo, added to the app Jan 2026. Some breaking news stays free.",
+      "access_evidence_url": "https://informitv.com/2026/01/07/bbc-expands-pay-wall-to-app-in-united-states/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://feeds.bbci.co.uk/news/rss.xml",
+          "poll_interval_minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "dw",
+      "name": "Deutsche Welle",
+      "homepage": "https://www.dw.com/en",
+      "country": "DE",
+      "ownership_type": "public_media",
+      "access_model": "free",
+      "access_notes": "German public broadcaster. Evidence is a third-party roundup.",
+      "access_evidence_url": "https://www.insightfulpost.com/free-news-websites-without-paywall/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://rss.dw.com/rdf/rss-en-all",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "france24",
+      "name": "France 24",
+      "homepage": "https://www.france24.com/en",
+      "country": "FR",
+      "ownership_type": "public_media",
+      "access_model": "unknown",
+      "access_notes": "French public broadcaster, believed free. No current evidence found.",
+      "feeds": [
+        {
+          "url": "https://www.france24.com/en/rss",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "cbc",
+      "name": "CBC News",
+      "homepage": "https://www.cbc.ca/news",
+      "country": "CA",
+      "ownership_type": "public_media",
+      "access_model": "free",
+      "access_notes": "An account is optional (personalization only). The feed timed out from a cloud server on 2026-10-22.",
+      "access_evidence_url": "https://cbchelp.cbc.ca/hc/en-ca/articles/27264104200987-Sign-up-for-a-CBC-account-to-access-more",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.cbc.ca/webfeed/rss/rss-topstories",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "abc-au",
+      "name": "ABC News (Australia)",
+      "homepage": "https://www.abc.net.au/news",
+      "country": "AU",
+      "ownership_type": "public_media",
+      "access_model": "free",
+      "access_notes": "No metering or paywall. Evidence is a third-party directory.",
+      "access_evidence_url": "https://aus.directory/news-websites-guide",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "al-jazeera",
+      "name": "Al Jazeera English",
+      "homepage": "https://www.aljazeera.com",
+      "country": "QA",
+      "ownership_type": "public_media",
+      "access_model": "free",
+      "access_notes": "Funded by the Qatari state. The evidence is from 2016, but no paywall has been reported since.",
+      "access_evidence_url": "https://network.aljazeera.net/en/pressroom/al-jazeera-english-expands-digital-access-us-audiences",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.aljazeera.com/xml/rss/all.xml",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "guardian",
+      "name": "The Guardian",
+      "homepage": "https://www.theguardian.com",
+      "country": "GB",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Owned by the Scott Trust and funded by reader donations. The website is open; only its app has a 20 articles/month meter.",
+      "access_evidence_url": "https://www.axios.com/2026/05/26/the-guardian-us-record-revenue",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://support.theguardian.com/us/contribute",
+      "feeds": [
+        {
+          "url": "https://www.theguardian.com/us-news/rss",
+          "poll_interval_minutes": 10,
+          "section": "US"
+        },
+        {
+          "url": "https://www.theguardian.com/world/rss",
+          "poll_interval_minutes": 10,
+          "section": "World"
+        }
+      ]
+    },
+    {
+      "slug": "propublica",
+      "name": "ProPublica",
+      "homepage": "https://www.propublica.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_evidence_url": "https://www.propublica.org/steal-our-stories",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://www.propublica.org/donate",
+      "feeds": [
+        {
+          "url": "https://www.propublica.org/feeds/propublica/main",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "the-conversation",
+      "name": "The Conversation (US)",
+      "homepage": "https://theconversation.com/us",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Articles by academics, free to read and republish. Evidence is from 2020.",
+      "access_evidence_url": "https://localmedia.org/2020/09/how-local-media-can-republish-expert-authored-articles-from-the-conversation-for-free/",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://donate.theconversation.com/us",
+      "feeds": [
+        {
+          "url": "https://theconversation.com/us/articles.atom",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "kff-health-news",
+      "name": "KFF Health News",
+      "homepage": "https://kffhealthnews.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_evidence_url": "https://kffhealthnews.org/about-us/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://kffhealthnews.org/feed/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "calmatters",
+      "name": "CalMatters",
+      "homepage": "https://calmatters.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Nonprofit and no paywall seen, but its About page doesn't say it is free.",
+      "access_evidence_url": "https://calmatters.org/about/",
+      "access_verified_on": "2026-10-22",
+      "coverage_regions": [
+        "CA"
+      ],
+      "donate_url": "https://calmatters.org/donate/",
+      "feeds": [
+        {
+          "url": "https://calmatters.org/feed/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "texas-tribune",
+      "name": "The Texas Tribune",
+      "homepage": "https://www.texastribune.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_evidence_url": "https://www.texastribune.org/2026/05/01/help-texans-shape-our-future/",
+      "access_verified_on": "2026-10-22",
+      "coverage_regions": [
+        "TX"
+      ],
+      "donate_url": "https://support.texastribune.org/",
+      "feeds": [
+        {
+          "url": "https://feeds.texastribune.org/feeds/main/",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "the-19th",
+      "name": "The 19th",
+      "homepage": "https://19thnews.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_evidence_url": "https://19thnews.org/republishing-guidelines",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://19thnews.org/donate/",
+      "feeds": [
+        {
+          "url": "https://19thnews.org/feed/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "grist",
+      "name": "Grist",
+      "homepage": "https://grist.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_evidence_url": "https://grist.org/article/a/republish",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://grist.org/donate/",
+      "feeds": [
+        {
+          "url": "https://grist.org/feed/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "inside-climate-news",
+      "name": "Inside Climate News",
+      "homepage": "https://insideclimatenews.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_evidence_url": "https://insideclimatenews.org/about/",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://insideclimatenews.org/donate/",
+      "feeds": [
+        {
+          "url": "https://insideclimatenews.org/feed/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "chalkbeat",
+      "name": "Chalkbeat",
+      "homepage": "https://www.chalkbeat.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Education news with local bureaus.",
+      "access_evidence_url": "https://www.chalkbeat.org/pages/republishing/",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://www.chalkbeat.org/donate/",
+      "feeds": [
+        {
+          "url": "https://www.chalkbeat.org/arc/outboundfeeds/rss/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "votebeat",
+      "name": "Votebeat",
+      "homepage": "https://www.votebeat.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Election administration news.",
+      "access_evidence_url": "https://www.votebeat.org/",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://www.votebeat.org/donate/",
+      "feeds": [
+        {
+          "url": "https://www.votebeat.org/arc/outboundfeeds/rss/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "marshall-project",
+      "name": "The Marshall Project",
+      "homepage": "https://www.themarshallproject.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Criminal justice.",
+      "access_evidence_url": "https://www.themarshallproject.org/2026/7/2/danger-behind-bars/republication",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://www.themarshallproject.org/donate",
+      "feeds": [
+        {
+          "url": "https://www.themarshallproject.org/rss/recent.rss",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "mother-jones",
+      "name": "Mother Jones",
+      "homepage": "https://www.motherjones.com",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Progressive investigative reporting. Says its website \"will always be free\".",
+      "access_evidence_url": "https://www.motherjones.com/topics/mojo-at-50/",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://www.motherjones.com/donate/",
+      "feeds": [
+        {
+          "url": "https://www.motherjones.com/feed/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "the-markup",
+      "name": "The Markup",
+      "homepage": "https://themarkup.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Tech accountability reporting.",
+      "access_evidence_url": "https://themarkup.org/about",
+      "access_verified_on": "2026-10-22",
+      "donate_url": "https://themarkup.org/donate",
+      "feeds": [
+        {
+          "url": "https://themarkup.org/feeds/rss.xml",
+          "poll_interval_minutes": 60
+        }
+      ]
+    },
+    {
+      "slug": "undark",
+      "name": "Undark",
+      "homepage": "https://undark.org",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Science journalism (Knight Science Journalism at MIT).",
+      "access_evidence_url": "https://undark.org/republishing-guidelines",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://undark.org/feed/",
+          "poll_interval_minutes": 60
+        }
+      ]
+    },
+    {
+      "slug": "reason",
+      "name": "Reason",
+      "homepage": "https://reason.com",
+      "country": "US",
+      "ownership_type": "nonprofit",
+      "access_model": "free",
+      "access_notes": "Libertarian. Reason Plus is a perks tier; no gated articles seen.",
+      "access_evidence_url": "https://reason.com/",
+      "access_verified_on": "2026-10-22",
+      "opinion_heavy": true,
+      "donate_url": "https://reason.org/donate/",
+      "feeds": [
+        {
+          "url": "https://reason.com/latest/feed/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "axios",
+      "name": "Axios",
+      "homepage": "https://www.axios.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "registration",
+      "access_notes": "Free articles need a verified email account; Axios Pro is a separate paid product. Axios's robots.txt disallows its feed for general crawlers, and the feed returned HTTP 403, so there is no feed.",
+      "access_evidence_url": "https://help.axios.com/hc/en-us/articles/36222603919515-Are-Axios-articles-free-or-do-I-need-a-subscription",
+      "access_verified_on": "2026-10-22",
+      "feeds": []
+    },
+    {
+      "slug": "fox-news",
+      "name": "Fox News",
+      "homepage": "https://www.foxnews.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "registration",
+      "access_notes": "Some articles need a free account. Weak evidence: reader forum posts from 2024 only.",
+      "access_evidence_url": "https://www.askwoody.com/forums/topic/foxnews-com-and-free-account/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
+          "poll_interval_minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "nbc-news",
+      "name": "NBC News",
+      "homepage": "https://www.nbcnews.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_notes": "$5.99/mo subscription since Dec 2025. Exclusive and enterprise stories paywalled since about Aug 2026; this may understate how much is paid.",
+      "access_evidence_url": "https://www.status.news/p/nbc-news-paywall-subscription-service",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://feeds.nbcnews.com/nbcnews/public/news",
+          "poll_interval_minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "cbs-news",
+      "name": "CBS News",
+      "homepage": "https://www.cbsnews.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_notes": "No paywall found. Weak evidence: there is no explicit policy statement.",
+      "access_evidence_url": "https://www.cbsnews.com/streaming/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.cbsnews.com/latest/rss/main",
+          "poll_interval_minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "abc-news",
+      "name": "ABC News",
+      "homepage": "https://abcnews.go.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_notes": "No paywall found. Carries a lot of AP wire copy for free.",
+      "access_evidence_url": "https://giorgiovalentini.substack.com/p/when-the-paywall-becomes-the-exit",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://abcnews.go.com/abcnews/topstories",
+          "poll_interval_minutes": 10,
+          "section": "Top stories"
+        },
+        {
+          "url": "https://abcnews.go.com/abcnews/usheadlines",
+          "poll_interval_minutes": 15,
+          "section": "US"
+        }
+      ]
+    },
+    {
+      "slug": "usa-today",
+      "name": "USA Today",
+      "homepage": "https://www.usatoday.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_notes": "Freemium: breaking news free, premium stories paid. Evidence is from 2021. The RSS feeds are dead, so the news sitemap is used instead.",
+      "access_evidence_url": "https://www.poynter.org/business-work/2021/no-longer-a-holdout-for-free-usa-today-launches-a-paywall-and-digital-only-subscription-plan/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.usatoday.com/news-sitemap.xml",
+          "poll_interval_minutes": 15,
+          "kind": "news_sitemap"
+        }
+      ]
+    },
+    {
+      "slug": "the-hill",
+      "name": "The Hill",
+      "homepage": "https://thehill.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_notes": "A paid \"The Hill Insider\" tier launched Jul 2026; existing news stays free.",
+      "access_evidence_url": "https://barrettmedia.com/2026/07/08/the-hill-launches-insider-subscription-tier/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://thehill.com/news/feed/",
+          "poll_interval_minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "politico",
+      "name": "Politico",
+      "homepage": "https://www.politico.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "registration",
+      "access_notes": "Free-account wall after about 10 articles. Pro is a paid business product. Evidence is from about 2024.",
+      "access_evidence_url": "https://www.adweek.com/media/politico-registration-wall/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://rss.politico.com/politics-news.xml",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "semafor",
+      "name": "Semafor",
+      "homepage": "https://www.semafor.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_evidence_url": "https://pressgazette.co.uk/north-america/semafor-2026-ben-smith-interview/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.semafor.com/rss.xml",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "cnn",
+      "name": "CNN",
+      "homepage": "https://www.cnn.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "metered_period": "month",
+      "access_notes": "Monthly free-article meter, then pay; Basic or All Access $6.99. The number of free articles isn't published. CNN's public RSS feeds are abandoned: the items are from 2023 and have no dates, so there is no feed.",
+      "access_evidence_url": "https://pressgazette.co.uk/north-america/cnn-uk-canada-subscriptions-website-paywall-streaming/",
+      "access_verified_on": "2026-10-22",
+      "feeds": []
+    },
+    {
+      "slug": "cnbc",
+      "name": "CNBC",
+      "homepage": "https://www.cnbc.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_notes": "Most articles free; CNBC Pro articles paid. CNBC's robots.txt disallows its RSS endpoints and the www feeds return HTTP 403, so there is no feed.",
+      "access_evidence_url": "https://cnbc.zendesk.com/hc/en-us/articles/37896895323931-How-much-does-CNBC-Pro-cost",
+      "access_verified_on": "2026-10-22",
+      "feeds": []
+    },
+    {
+      "slug": "newsweek",
+      "name": "Newsweek",
+      "homepage": "https://www.newsweek.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_notes": "Most articles free, plus a members-only premium section (May 2026).",
+      "access_evidence_url": "https://www.nyreport.com/2026/05/12/newsweek-launches-members-only-content-hub/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.newsweek.com/rss.xml",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "ny-post",
+      "name": "New York Post",
+      "homepage": "https://nypost.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_notes": "Only Sports+ is paid. Weak evidence: a secondhand summary.",
+      "access_evidence_url": "https://alley.com/work/new-york-post/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://nypost.com/feed/",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "washington-examiner",
+      "name": "Washington Examiner",
+      "homepage": "https://www.washingtonexaminer.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_notes": "Premium and magazine content subscriber-only. Could be stricter than \"mixed\".",
+      "access_evidence_url": "https://www.washingtonexaminer.com/subscribe/digital/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.washingtonexaminer.com/feed/",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "ars-technica",
+      "name": "Ars Technica",
+      "homepage": "https://arstechnica.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_notes": "Ars Pro is an ad-free option; articles are free.",
+      "access_evidence_url": "https://www.alphonsolabs.com/best-tech-websites-news-reviews-2026/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://feeds.arstechnica.com/arstechnica/index",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "techcrunch",
+      "name": "TechCrunch",
+      "homepage": "https://techcrunch.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_notes": "Its paid tier (TC+) ended Feb 2024.",
+      "access_evidence_url": "https://techcrunch.com/subscribe/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://techcrunch.com/feed/",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "stat",
+      "name": "STAT",
+      "homepage": "https://www.statnews.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_notes": "STAT+ articles paid, others free.",
+      "access_evidence_url": "https://www.statnews.com/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.statnews.com/feed/",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "the-verge",
+      "name": "The Verge",
+      "homepage": "https://www.theverge.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "access_notes": "Dynamic meter on reporting, reviews and features; quick posts free.",
+      "access_evidence_url": "https://www.semafor.com/article/12/03/2024/the-verge-raises-a-partial-paywall-its-a-tragedy-that-garbage-is-free-and-news-is-behind-paywalls",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.theverge.com/rss/index.xml",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "vox",
+      "name": "Vox",
+      "homepage": "https://www.vox.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "access_notes": "Dynamic paywall since Jan 2025; some public-service stories free.",
+      "access_evidence_url": "https://pressgazette.co.uk/publishers/digital-journalism/vox-editor-memberships-paywall-trump/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.vox.com/rss/index.xml",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "nyt",
+      "name": "The New York Times",
+      "homepage": "https://www.nytimes.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "access_notes": "Dynamic: a few free articles, then a free-account wall, then the paywall. Many public libraries offer free passes.",
+      "access_evidence_url": "https://theaudiencers.com/the-new-york-times-dynamic-paywall-model-analyzed/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+          "poll_interval_minutes": 10
+        }
+      ]
+    },
+    {
+      "slug": "wapo",
+      "name": "The Washington Post",
+      "homepage": "https://www.washingtonpost.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "access_notes": "An AI \"smart meter\" sets how many free articles each reader gets. The feeds returned HTTP 502 from a cloud server on 2026-10-22.",
+      "access_evidence_url": "https://washingtonian.com/2026/03/12/the-washington-post-is-using-reader-data-to-set-subscription-prices-how-does-that-work/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://feeds.washingtonpost.com/rss/national",
+          "poll_interval_minutes": 15,
+          "section": "National"
+        },
+        {
+          "url": "https://feeds.washingtonpost.com/rss/world",
+          "poll_interval_minutes": 15,
+          "section": "World"
+        }
+      ]
+    },
+    {
+      "slug": "wsj",
+      "name": "The Wall Street Journal",
+      "homepage": "https://www.wsj.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "paywalled",
+      "access_notes": "Hard paywall. Some libraries offer free passes.",
+      "access_evidence_url": "https://pressgazette.co.uk/paywalls/biggest-subscription-news-websites-2026/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "bloomberg",
+      "name": "Bloomberg",
+      "homepage": "https://www.bloomberg.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "metered_period": "month",
+      "access_notes": "Very small, undisclosed free allowance (about 5/mo reported).",
+      "access_evidence_url": "https://www.bloomberg.com/help/question/article-gifting/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://feeds.bloomberg.com/politics/news.rss",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "ft",
+      "name": "Financial Times",
+      "homepage": "https://www.ft.com",
+      "country": "GB",
+      "ownership_type": "commercial",
+      "access_model": "paywalled",
+      "access_notes": "A free account reportedly unlocks about 10 articles per 30 days; otherwise paid.",
+      "access_evidence_url": "https://pressgazette.co.uk/publishers/nationals/ft-in-third-way-move-on-gated-web-access/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.ft.com/rss/home",
+          "poll_interval_minutes": 20
+        }
+      ]
+    },
+    {
+      "slug": "the-atlantic",
+      "name": "The Atlantic",
+      "homepage": "https://www.theatlantic.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "metered_period": "month",
+      "access_notes": "Small monthly free count; some pieces subscriber-only. Evidence is from 2019.",
+      "access_evidence_url": "https://www.niemanlab.org/2019/09/the-atlantic-rejoins-the-metered-paywall-club-with-digital-subscriptions-starting-at-49-99-year/",
+      "access_verified_on": "2026-10-22",
+      "opinion_heavy": true,
+      "feeds": [
+        {
+          "url": "https://www.theatlantic.com/feed/all/",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "economist",
+      "name": "The Economist",
+      "homepage": "https://www.economist.com",
+      "country": "GB",
+      "ownership_type": "commercial",
+      "access_model": "paywalled",
+      "access_evidence_url": "https://pressgazette.co.uk/paywalls/biggest-subscription-news-websites-2026/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.economist.com/latest/rss.xml",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "la-times",
+      "name": "Los Angeles Times",
+      "homepage": "https://www.latimes.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "access_notes": "Public-safety news is outside the meter.",
+      "access_evidence_url": "https://www.niemanlab.org/2025/01/the-l-a-times-sees-subscriber-bump-during-wildfire-coverage-despite-removing-paywall/",
+      "access_verified_on": "2026-10-22",
+      "coverage_regions": [
+        "CA"
+      ],
+      "feeds": [
+        {
+          "url": "https://www.latimes.com/world-nation/rss2.0.xml",
+          "poll_interval_minutes": 15
+        }
+      ]
+    },
+    {
+      "slug": "scientific-american",
+      "name": "Scientific American",
+      "homepage": "https://www.scientificamerican.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "metered_period": "month",
+      "access_notes": "A \"limited number\" of free articles (3/mo at launch).",
+      "access_evidence_url": "https://www.scientificamerican.com/contact-us/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "http://rss.sciam.com/ScientificAmerican-Global",
+          "poll_interval_minutes": 60
+        }
+      ]
+    },
+    {
+      "slug": "wired",
+      "name": "Wired",
+      "homepage": "https://www.wired.com",
+      "country": "US",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "metered_period": "month",
+      "access_notes": "Monthly free allowance; the number isn't published (4/mo historically).",
+      "access_evidence_url": "https://www.niemanlab.org/2019/05/wired-is-a-little-more-than-a-year-into-having-a-paywall-heres-what-its-learned/",
+      "access_verified_on": "2026-10-22",
+      "feeds": [
+        {
+          "url": "https://www.wired.com/feed/rss",
+          "poll_interval_minutes": 30
+        }
+      ]
+    },
+    {
+      "slug": "free-beacon",
+      "name": "Washington Free Beacon",
+      "homepage": "https://freebeacon.com",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_evidence_url": "https://freebeacon.com/latest-news/soros-ag-behind-25-billion-judgment-against-meta-that-promises-to-police-speech/",
+      "access_notes": "No paywall markers on current articles (checked 2026-10-22). Mostly original reporting, plus columns.",
+      "feeds": [
+        {
+          "url": "https://freebeacon.com/feed/",
+          "poll_interval_minutes": 20
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    },
+    {
+      "slug": "just-the-news",
+      "name": "Just the News",
+      "homepage": "https://justthenews.com",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_evidence_url": "https://justthenews.com/",
+      "access_notes": "No paywall markers on current articles (checked 2026-10-22).",
+      "feeds": [
+        {
+          "url": "https://justthenews.com/rss.xml",
+          "poll_interval_minutes": 20
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    },
+    {
+      "slug": "realclear-investigations",
+      "name": "RealClearInvestigations",
+      "homepage": "https://www.realclearinvestigations.com",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_evidence_url": "https://www.realclearinvestigations.com/articles/2020/09/28/realclearinvestigations_needs_your_support_125361.html",
+      "access_notes": "Says its original journalism is free, with no paywall (2020 statement). Feed carries RCI's own investigations only, not its links page.",
+      "feeds": [
+        {
+          "url": "https://www.realclearinvestigations.com/articles/index.xml",
+          "poll_interval_minutes": 60
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    },
+    {
+      "slug": "daily-caller",
+      "name": "Daily Caller",
+      "homepage": "https://dailycaller.com",
+      "ownership_type": "commercial",
+      "access_model": "mixed",
+      "access_evidence_url": "https://dailycaller.com/2026/10/21/anthropic-ai-safety-bill-draft-influenced-by-california-sb-53-newsom/",
+      "access_notes": "Most articles free. A few are tagged premium, for its paid \"Patriots\" tier (1 of 12 recent articles on 2026-10-22).",
+      "feeds": [
+        {
+          "url": "https://dailycaller.com/feed/",
+          "poll_interval_minutes": 15
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    },
+    {
+      "slug": "washington-times",
+      "name": "The Washington Times",
+      "homepage": "https://www.washingtontimes.com",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "metered_limit": 6,
+      "metered_period": "month",
+      "access_evidence_url": "https://www.washingtontimes.com/letter-from-the-editor/",
+      "access_notes": "6 free articles a month, per an undated letter from the editor. The feed returned HTTP 403 from a cloud server on 2026-10-22.",
+      "feeds": [
+        {
+          "url": "https://www.washingtontimes.com/rss/headlines/news/",
+          "poll_interval_minutes": 15
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    },
+    {
+      "slug": "national-review",
+      "name": "National Review (news)",
+      "homepage": "https://www.nationalreview.com/news/",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "access_evidence_url": "https://www.nationalreview.com/news/california-elementary-schools-teach-cisheteropatriarchy-and-decolonization-house-probe-finds/",
+      "access_notes": "Metered; some news posts are exempt. Only the news-desk feed is used, not the opinion-heavy main feed.",
+      "feeds": [
+        {
+          "url": "https://www.nationalreview.com/news/feed/",
+          "poll_interval_minutes": 30
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    },
+    {
+      "slug": "the-dispatch",
+      "name": "The Dispatch",
+      "homepage": "https://thedispatch.com",
+      "ownership_type": "commercial",
+      "access_model": "metered",
+      "access_evidence_url": "https://thedispatch.com/article/trump-putin-concessions-russia-ukraine/",
+      "access_notes": "Articles are metered; most newsletters are members-only; podcasts are open. Reported analysis plus opinion.",
+      "feeds": [
+        {
+          "url": "https://thedispatch.com/feed/",
+          "poll_interval_minutes": 30
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    },
+    {
+      "slug": "deseret-news",
+      "name": "Deseret News",
+      "homepage": "https://www.deseret.com",
+      "ownership_type": "commercial",
+      "access_model": "free",
+      "access_evidence_url": "https://www.deseret.com/politics/2026/10/22/utah-republican-nominee-for-congress-outlines-gen-z-vision-for-conservative-movement-after-trump/",
+      "access_notes": "No paywall markers on current articles (checked 2026-10-22).",
+      "coverage_regions": [
+        "UT"
+      ],
+      "feeds": [
+        {
+          "url": "https://www.deseret.com/arc/outboundfeeds/rss/",
+          "poll_interval_minutes": 20
+        }
+      ],
+      "country": "US",
+      "access_verified_on": "2026-10-22"
+    }
+  ]
+}

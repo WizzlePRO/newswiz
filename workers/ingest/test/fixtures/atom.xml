@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Example Atom</title>
+  <entry>
+    <title type="html">Scientists map &lt;em&gt;deep&lt;/em&gt; ocean currents</title>
+    <link rel="alternate" type="text/html" href="/articles/ocean-currents-123"/>
+    <link rel="enclosure" type="image/jpeg" href="https://cdn.example.org/ocean.jpg"/>
+    <id>tag:example.org,2026:123</id>
+    <published>2026-10-21T21:08:23Z</published>
+    <updated>2026-10-22T01:00:00Z</updated>
+    <author><name>Dr. Ada Ocean</name></author>
+    <category term="Science"/>
+    <summary type="html">&lt;p&gt;New measurements reveal how heat moves through the deep ocean.&lt;/p&gt;</summary>
+  </entry>
+</feed>

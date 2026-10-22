@@ -1,0 +1,472 @@
+{
+  "license": "AllSides Media Bias Ratings™ by AllSides.com (https://www.allsides.com/media-bias), licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Collected 2026-10-22 and reduced to one lean per outlet. Non-commercial use only; this file is licensed separately from the NewsWiz code. AllSides does not endorse NewsWiz.",
+  "verification": "allsides.com blocks scripted access, so these were collected from search-engine copies of each outlet's AllSides page and not checked against the live site. Spot-check any rating you rely on by opening its rating_url.",
+  "ratings": [
+    {
+      "slug": "abc-au",
+      "lean": "unrated",
+      "note": "No AllSides rating found."
+    },
+    {
+      "slug": "abc-news",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/abc-news-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "al-jazeera",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/al-jazeera-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Rating covers Al Jazeera generally; low confidence."
+    },
+    {
+      "slug": "ap",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/associated-press-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Moved from Left to Lean Left in May 2026 (just over the line)."
+    },
+    {
+      "slug": "ars-technica",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/ars-technica-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "axios",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/axios-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "bbc",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/bbc-news-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Close to the Lean Left line."
+    },
+    {
+      "slug": "bloomberg",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/bloomberg-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Moved from Lean Left in mid-2026; low confidence."
+    },
+    {
+      "slug": "calmatters",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/calmatters-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "cbc",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/cbc-news-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "cbs-news",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/cbs-news-online-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "chalkbeat",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/chalkbeat-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "cnbc",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/cnbc-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Moved from Center in 2025."
+    },
+    {
+      "slug": "cnn",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/cnn-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Online news; CNN opinion is rated separately."
+    },
+    {
+      "slug": "daily-caller",
+      "lean": "right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/daily-caller-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "deseret-news",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/deseret-news-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Moved from Lean Right in Oct 2022."
+    },
+    {
+      "slug": "dw",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/deutsche-welle-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "economist",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/economist-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "fox-news",
+      "lean": "right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/fox-news-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Digital news; Fox opinion is rated separately."
+    },
+    {
+      "slug": "france24",
+      "lean": "unrated",
+      "note": "Not rated by AllSides."
+    },
+    {
+      "slug": "free-beacon",
+      "lean": "right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/washington-free-beacon-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "ft",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/financial-times-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "grist",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/grist",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "guardian",
+      "lean": "left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/guardian-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Moved from Lean Left in Nov 2024; low confidence."
+    },
+    {
+      "slug": "inside-climate-news",
+      "lean": "unrated",
+      "note": "No AllSides rating found."
+    },
+    {
+      "slug": "just-the-news",
+      "lean": "lean_right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/blog/brand-new-allsides-media-bias-chart-ahead-2024-election-version-10",
+      "rated_on": "2026-10-22",
+      "note": "Added to the AllSides chart in Oct 2024 (v10); its own rating page wasn't confirmed."
+    },
+    {
+      "slug": "kff-health-news",
+      "lean": "unrated",
+      "note": "AllSides rates only the parent foundation (KFF), not the newsroom."
+    },
+    {
+      "slug": "la-times",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/los-angeles-times-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "marshall-project",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/marshall-project-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "mother-jones",
+      "lean": "left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/mother-jones-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "national-review",
+      "lean": "lean_right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/national-review-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "News desk; National Review opinion is rated Right separately."
+    },
+    {
+      "slug": "nbc-news",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/nbc-news-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "newsweek",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/newsweek-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "npr",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/npr-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Online news; NPR opinion is rated separately."
+    },
+    {
+      "slug": "ny-post",
+      "lean": "right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/new-york-post-news-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "News section; moved from Lean Right in Jun 2026."
+    },
+    {
+      "slug": "nyt",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/new-york-times-news-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "News only; NYT opinion is rated Left separately."
+    },
+    {
+      "slug": "pbs-newshour",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/pbs-newshour-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "politico",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/politico-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "propublica",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/propublica-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "realclear-investigations",
+      "lean": "unrated",
+      "note": "AllSides doesn't rate RCI separately. RealClearPolitics' own content is rated Lean Right, and its aggregator Center."
+    },
+    {
+      "slug": "reason",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/reason-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Moved from Lean Right in Sep 2024."
+    },
+    {
+      "slug": "reuters",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/reuters-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "scientific-american",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/scientific-american",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "semafor",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/semafor-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "stat",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/stat-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "techcrunch",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/techcrunch-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "texas-tribune",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/texas-tribune-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "the-19th",
+      "lean": "unrated",
+      "note": "No AllSides rating found."
+    },
+    {
+      "slug": "the-atlantic",
+      "lean": "left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/atlantic-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "the-conversation",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/conversation-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "the-dispatch",
+      "lean": "lean_right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/blog/dispatch-retains-lean-right-bias-rating",
+      "rated_on": "2026-10-22",
+      "note": "Confirmed in a Feb 2024 survey."
+    },
+    {
+      "slug": "the-hill",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/hill-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Near the Lean Left line."
+    },
+    {
+      "slug": "the-markup",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/markup-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "the-verge",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/verge-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low; one copy of the page showed Not Rated."
+    },
+    {
+      "slug": "undark",
+      "lean": "unrated",
+      "note": "No AllSides rating found."
+    },
+    {
+      "slug": "usa-today",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/usa-today-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "votebeat",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/votebeat-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "AllSides marks its confidence as low."
+    },
+    {
+      "slug": "vox",
+      "lean": "left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/vox-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "wapo",
+      "lean": "lean_left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/washington-post-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "News only; opinion is rated separately."
+    },
+    {
+      "slug": "washington-examiner",
+      "lean": "lean_right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/washington-examiner-media-bias",
+      "rated_on": "2026-10-22"
+    },
+    {
+      "slug": "washington-times",
+      "lean": "lean_right",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/washington-times-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Reviewed Jan 2025."
+    },
+    {
+      "slug": "wired",
+      "lean": "left",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/wired-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "Moved from Lean Left in Feb 2025."
+    },
+    {
+      "slug": "wsj",
+      "lean": "center",
+      "rater": "AllSides",
+      "rating_url": "https://www.allsides.com/news-source/wall-street-journal-media-bias",
+      "rated_on": "2026-10-22",
+      "note": "News only; WSJ opinion is rated Lean Right separately."
+    }
+  ]
+}
