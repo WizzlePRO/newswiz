@@ -24,6 +24,25 @@ The first articles arrive within about a minute. `make logs` follows the worker 
 
 **Before exposing NewsWiz to the internet, set `APP_PASSPHRASE`.** Reader-view copies are meant for your own devices only.
 
+## Deploying to Railway
+
+See [docs/deploy-railway.md](docs/deploy-railway.md). It covers one web service, one worker service and Postgres, all from this repo, and redeploys on every push to `main`.
+
+## API for the mobile apps
+
+All endpoints accept either the browser session cookie or `Authorization: Bearer <token>`. Get the token from `POST /api/login` with JSON `{"passphrase": "..."}`.
+
+| Endpoint | Returns |
+|---|---|
+| `GET /api/catchup[?longer=1]` | The balanced briefing, in-progress articles, and balance summary |
+| `GET /api/articles?free=1&unread=1&lean=…&source=…&before=…` | Latest articles, newest first, with a `next_before` cursor |
+| `GET /api/articles/:id` | One article, its reading state, and reader-view HTML for free outlets (blocks tagged `data-block`) |
+| `POST /api/articles/:id/state` | Update `{opened, saved, read, progress, block, progressSource}` |
+| `GET /api/saved` | The reading list |
+| `POST /api/cycle` | "I'm caught up": start a new cycle |
+
+Each article includes `reader_view: true` when it opens in the in-app reader.
+
 ## Local development
 
 You need Node 22.12+, pnpm 10, and Docker (or your own Postgres 16).

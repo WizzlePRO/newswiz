@@ -18,4 +18,4 @@ RUN pnpm --filter @newswiz/web build
 
 ENV NODE_ENV=production
 EXPOSE 3000
-CMD ["pnpm", "--filter", "@newswiz/web", "start"]
+CMD ["sh", "scripts/start.sh"]

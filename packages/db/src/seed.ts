@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import type pg from 'pg';
+import { SETUP_LOCK_ID } from './migrate.ts';
 import { ACCESS_MODELS, BIAS_LEANS, FEED_KINDS, OWNERSHIP_TYPES } from './types.ts';
 import type { AccessModel, BiasLean, FeedKind, OwnershipType } from './types.ts';
 
@@ -73,6 +74,8 @@ export async function applySeed(pool: pg.Pool, sources: SeedSource[]): Promise<{
   let feedCount = 0;
   try {
     await client.query('BEGIN');
+    // Serialize with migrations and with a seed running from another service.
+    await client.query('SELECT pg_advisory_xact_lock($1)', [SETUP_LOCK_ID]);
     for (const s of sources) {
       const { rows } = await client.query<{ id: number }>(
         `INSERT INTO sources (slug, name, homepage, country, coverage_regions, ownership_type, access_model,

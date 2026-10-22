@@ -6,8 +6,11 @@ import { SESSION_COOKIE, sessionToken, timingSafeEqual } from './lib/auth';
 export async function proxy(req: NextRequest) {
   const passphrase = process.env.APP_PASSPHRASE;
   if (!passphrase) return NextResponse.next();
+  const expected = await sessionToken(passphrase);
+  // Browsers send the session cookie; the mobile apps send the same token as a bearer header.
   const cookie = req.cookies.get(SESSION_COOKIE)?.value ?? '';
-  if (timingSafeEqual(cookie, await sessionToken(passphrase))) return NextResponse.next();
+  const bearer = req.headers.get('authorization')?.match(/^Bearer\s+(.+)$/i)?.[1] ?? '';
+  if (timingSafeEqual(cookie, expected) || timingSafeEqual(bearer, expected)) return NextResponse.next();
   if (req.nextUrl.pathname.startsWith('/api/')) return Response.json({ error: 'sign in required' }, { status: 401 });
   const login = new URL('/login', req.url);
   login.searchParams.set('next', req.nextUrl.pathname + req.nextUrl.search);

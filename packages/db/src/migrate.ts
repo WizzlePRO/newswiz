@@ -5,7 +5,21 @@ import type pg from 'pg';
 const MIGRATIONS_DIR = fileURLToPath(new URL('../migrations/', import.meta.url));
 
 /** Apply any migrations in packages/db/migrations that haven't run yet, each in its own transaction. */
+/** Arbitrary constant for pg_advisory_lock, so two services deploying at once take turns. */
+export const SETUP_LOCK_ID = 7_310_455;
+
 export async function migrate(pool: pg.Pool, log: (msg: string) => void = () => {}): Promise<string[]> {
+  const lock = await pool.connect();
+  try {
+    await lock.query('SELECT pg_advisory_lock($1)', [SETUP_LOCK_ID]);
+    return await migrateLocked(pool, log);
+  } finally {
+    await lock.query('SELECT pg_advisory_unlock($1)', [SETUP_LOCK_ID]).catch(() => {});
+    lock.release();
+  }
+}
+
+async function migrateLocked(pool: pg.Pool, log: (msg: string) => void): Promise<string[]> {
   await pool.query(`CREATE TABLE IF NOT EXISTS schema_migrations (
     name text PRIMARY KEY,
     applied_at timestamptz NOT NULL DEFAULT now()

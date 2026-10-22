@@ -1,3 +1,4 @@
+import { createServer } from 'node:http';
 import { closePool, getPool } from '@newswiz/db';
 import { PoliteFetcher } from '@newswiz/net';
 import { maybeRunDailyDiscovery } from './discover.ts';
@@ -11,6 +12,17 @@ const TICK_MS = 30_000;
 const pool = getPool();
 const fetcher = new PoliteFetcher();
 let stopping = false;
+let lastCycleAt: Date | null = null;
+
+// Hosts like Railway health-check every service over HTTP; answer on $PORT when it's set.
+// Unhealthy if no cycle has finished in 10 minutes (the loop runs every 30 seconds).
+const health = process.env.PORT
+  ? createServer((_req, res) => {
+      const fresh = lastCycleAt !== null && Date.now() - lastCycleAt.getTime() < 10 * 60_000;
+      res.writeHead(fresh || lastCycleAt === null ? 200 : 503, { 'content-type': 'application/json' });
+      res.end(JSON.stringify({ ok: fresh, role: 'worker', last_cycle_at: lastCycleAt }));
+    }).listen(Number(process.env.PORT))
+  : null;
 
 const log = (r: PollReport) => {
   const u = r.upsert;
@@ -24,6 +36,7 @@ const log = (r: PollReport) => {
 
 async function tick(): Promise<void> {
   const reports = await runCycle(pool, fetcher, { concurrency, onReport: log });
+  lastCycleAt = new Date();
   if (reports.length) {
     const inserted = reports.reduce((n, r) => n + (r.upsert?.inserted ?? 0), 0);
     const failed = reports.filter((r) => !r.ok).length;
@@ -57,4 +70,5 @@ do {
   if (once) break;
   for (let waited = 0; waited < TICK_MS && !stopping; waited += 1000) await new Promise((r) => setTimeout(r, 1000));
 } while (!stopping);
+health?.close();
 await closePool();

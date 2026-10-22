@@ -1,22 +1,13 @@
-import {
-  balanceCycle, getCycleStart, listInProgress, loadCycleCandidates, summarizeBalance,
-} from '@newswiz/db';
 import { ArticleCard } from '@/components/ArticleCard';
 import { BalanceMeter } from '@/components/BalanceMeter';
 import { CaughtUpButton } from '@/components/CaughtUpButton';
 import { KeyboardNav } from '@/components/KeyboardNav';
+import { loadBriefing } from '@/lib/briefing';
 import { formatClock } from '@/lib/format';
-import { db } from '@/lib/server';
-
-const BRIEFING_SIZE = 40;
 
 export default async function CatchUp({ searchParams }: { searchParams: Promise<{ more?: string; done?: string }> }) {
   const { more, done } = await searchParams;
-  const now = new Date();
-  const since = await getCycleStart(db(), now);
-  const [candidates, inProgress] = await Promise.all([loadCycleCandidates(db(), since), listInProgress(db(), 3)]);
-  const limit = more ? BRIEFING_SIZE * 3 : BRIEFING_SIZE;
-  const briefing = balanceCycle(candidates, { now, limit });
+  const { now, since, candidates, briefing, inProgress, picked, pool, outlets } = await loadBriefing({ longer: Boolean(more) });
   const remaining = candidates.length - briefing.length;
 
   return (
@@ -24,7 +15,7 @@ export default async function CatchUp({ searchParams }: { searchParams: Promise<
       <h1>Catch up</h1>
       <p className="lede">
         Since {formatClock(since)} · {candidates.length.toLocaleString()} new from{' '}
-        {new Set(candidates.map((c) => c.source_slug)).size} outlets. Here&apos;s a balanced {briefing.length}.
+        {outlets} outlets. Here&apos;s a balanced {briefing.length}.
       </p>
 
       {inProgress.length > 0 && (
@@ -44,7 +35,7 @@ export default async function CatchUp({ searchParams }: { searchParams: Promise<
         </div>
       ) : (
         <>
-          <BalanceMeter picked={summarizeBalance(briefing)} pool={summarizeBalance(candidates)} />
+          <BalanceMeter picked={picked} pool={pool} />
           <ul className="cards">
             {briefing.map((a) => (
               <ArticleCard key={a.id} article={a} now={now} />
