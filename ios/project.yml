@@ -1,0 +1,82 @@
+# XcodeGen spec: `xcodegen generate` turns this into NewsWiz.xcodeproj (see README.md).
+# To use your own identifiers, change bundleIdPrefix, both PRODUCT_BUNDLE_IDENTIFIERs, the
+# App Group in both entitlements below, and Shared.appGroup in Shared/Shared.swift.
+name: NewsWiz
+options:
+  bundleIdPrefix: com.wizzlepro
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    # Put your 10-character Team ID here, or pick your team in Xcode's Signing & Capabilities.
+    DEVELOPMENT_TEAM: ""
+    TARGETED_DEVICE_FAMILY: "1,2"
+targets:
+  NewsWiz:
+    type: application
+    platform: iOS
+    sources:
+      - App
+      - Shared
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: NewsWiz
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        NSSupportsLiveActivities: true
+        ITSAppUsesNonExemptEncryption: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        CFBundleURLTypes:
+          - CFBundleURLName: com.wizzlepro.newswiz
+            CFBundleURLSchemes: [newswiz]
+        NSUserActivityTypes: [com.wizzlepro.newswiz.reading]
+        # Lets you point the app at http://<your-mac>.local:3000 while developing.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    entitlements:
+      path: App/NewsWiz.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.wizzlepro.newswiz]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wizzlepro.newswiz
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    dependencies:
+      - target: NewsWizWidgets
+  NewsWizWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Widgets
+      - Shared
+    info:
+      path: Widgets/Info.plist
+      properties:
+        CFBundleDisplayName: NewsWiz Widgets
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: Widgets/NewsWizWidgets.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.wizzlepro.newswiz]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wizzlepro.newswiz.widgets

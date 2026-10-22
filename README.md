@@ -10,6 +10,8 @@ A personal news reader to replace Google News and Apple News. It ranks free and 
 - **Sources you control.** 63 outlets with researched access policies and evidence links. Boost or mute any of them, and check feed health at a glance.
 - **Daily source discovery.** Once a day the worker looks for new outlets: sites your outlets keep linking to that publish a working, recent feed. It samples an article from each for paywall signals, and suggestions wait on the **Discover** page until you add or dismiss them.
 
+**iPhone and iPad app:** [ios/README.md](ios/README.md) has the Xcode setup steps. It adds a reading-progress Live Activity, a briefing Live Activity, Continue Reading and Catch-up widgets, Siri shortcuts, and Handoff.
+
 See [SPEC.md](SPEC.md) for the full plan and [DECISIONS.md](DECISIONS.md) for choices made along the way.
 
 ## Quick start (Docker)
@@ -78,6 +80,7 @@ packages/net      Polite fetcher: honest user agent, robots.txt, ETags, timeouts
 packages/reader   Reader-view extraction (Readability + strict HTML sanitizing)
 workers/ingest    Feed polling, parsing (RSS, Atom, RDF, news sitemaps), backoff
 data/             sources.json (outlet registry) and bias-ratings.json (AllSides, CC BY-NC)
+ios/              SwiftUI iOS app + widget extension (XcodeGen project.yml)
 ```
 
 ## Adding or changing sources
