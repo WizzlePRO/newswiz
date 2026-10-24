@@ -6,7 +6,9 @@
   },
   "deploy": {
     "startCommand": "sh scripts/start.sh",
-    "preDeployCommand": ["pnpm migrate && pnpm seed"],
+    "preDeployCommand": [
+      "sh scripts/predeploy.sh"
+    ],
     "healthcheckPath": "/api/health",
     "healthcheckTimeout": 120,
     "restartPolicyType": "ON_FAILURE",
